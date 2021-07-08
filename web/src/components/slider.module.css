@@ -1,0 +1,74 @@
+@import "../pages/normalize.module.css";
+.wrapper {
+  display: grid;
+  grid-template-columns: 5% 45% 50%;
+}
+.wrapper .wrap {
+  grid-column-start: 2;
+  background: radial-gradient(190px at 50% 50%, #32b298 0%, #32b298 35vh, rgba(0, 0, 0, 0) 0px);
+}
+.wrapper .wrap .contenu {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: #3d4441;
+  font-size: 20px;
+}
+.wrapper .wrap .contenu .cont {
+  color: #fff;
+  width: 60%;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.wrapper .wrap .contenu .desc {
+  width: 60%;
+  color: #fff;
+  font-size: 14px;
+}
+.wrapper .wrap button {
+  position: relative;
+  top: -20px;
+  left: 145px;
+  margin-top: 20px;
+  text-align: center;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 3px 3px 8px #00000029;
+  border-radius: 10px;
+  width: 200px;
+  height: 41px;
+  color: #32b298;
+  border: none;
+  text-transform: uppercase;
+}
+.wrapper .wrap button:hover {
+  background-color: #3d3d3d;
+}
+.wrapper .image {
+  grid-row-start: -1;
+  grid-column-start: 3;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .image img {
+  margin: 0 auto;
+  width: 1006px;
+  height: 650px;
+}
+
+.content {
+  display: flex;
+}
+.content .left {
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+
+/*# sourceMappingURL=slider.module.css.map */

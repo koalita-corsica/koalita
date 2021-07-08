@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const { isFuture } = require("date-fns");
 /**
  * Implement Gatsby's Node APIs in this file.
@@ -7,4 +8,39 @@ const { isFuture } = require("date-fns");
 
 const { format } = require("date-fns");
 
-exports.createPages = async ({ graphql, actions }) => {};
+async function createRealisationsPages(graphql, actions) {
+  const { createPage } = actions;
+  const result = await graphql(`
+    {
+      allSanityTravails(filter: { slug: { current: { ne: null } } }) {
+        edges {
+          node {
+            id
+            slug {
+              current
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  if (result.errors) throw result.errors;
+
+  const postEdges = (result.data.allSanityTravails || {}).edges || [];
+
+  postEdges.forEach((edge) => {
+    const { id, slug = {} } = edge.node;
+    const path = `/realisations/${slug.current}/`;
+
+    createPage({
+      path,
+      component: require.resolve("./src/templates/travails-template.js"),
+      context: { id },
+    });
+  });
+}
+
+exports.createPages = async ({ graphql, actions }) => {
+  await createRealisationsPages(graphql, actions);
+};

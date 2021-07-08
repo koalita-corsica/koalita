@@ -1,0 +1,22 @@
+@import "../pages/normalize.module.css";
+
+$vert: #32b298;
+$grisc: #efefef;
+$grisf: #3d3d3d;
+
+.wrapper {
+  display: flex;
+  .right {
+    font-size: 40px;
+    position: relative;
+    right: 57%;
+    top: 80%;
+    cursor: pointer;
+  }
+  .left {
+    font-size: 40px;
+    position: relative;
+    top: 80%;
+    cursor: pointer;
+  }
+}

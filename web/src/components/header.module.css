@@ -1,114 +1,136 @@
-@import '../styles/custom-media.css';
-@import '../styles/custom-properties.css';
-
-.root {
-  position: relative;
-  z-index: 100;
+@charset "UTF-8";
+@import "../pages//normalize.module.css";
+a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  text-align: left;
+  font: normal normal 800 20px/30px Muli;
+  letter-spacing: 0px;
+  color: #3d4441;
+  opacity: 1;
+}
+a:hover {
+  color: #32b298;
+}
+a:active {
+  color: #32b298;
 }
 
-.wrapper {
-  box-sizing: border-box;
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 1em;
-  display: flex;
+main {
+  margin-top: 10rem;
+}
 
-  @media (--media-min-small) {
-    padding: 1.5em 1.5em;
+header {
+  width: 100%;
+  background: transparent;
+  z-index: 3;
+}
+@media screen and (max-width: 480px) {
+  header .logo {
+    top: 40px;
+    text-align: center;
+    background: #32b298;
+    padding: 1rem;
+    border-radius: 50% 50% 50% 50%/0% 0% 100% 100%;
+    width: 418px;
+    height: 143px;
   }
-}
-
-.branding {
-  font-weight: 600;
-  flex: 1;
-
-  @nest & a {
+  header input {
+    position: absolute;
+    z-index: 1;
+    height: 2rem;
+    width: 2rem;
+    margin: 0.5rem 0 0 2rem;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+  header input:checked,
+header input:focus {
+    outline: none;
+  }
+  header input:checked:after {
+    font-size: 2rem;
+    color: #efefef;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "";
     display: inline-block;
-    padding: 0.5em;
-    color: inherit;
-    text-decoration: none;
-
-    @media (hover: hover) {
-      @nest &:hover {
-        color: var(--color-accent);
-      }
-    }
+    transform: translateX(85vw);
+    transition-duration: 1s;
+    transition-delay: 0.1s;
+  }
+  header input:not(:checked):after {
+    font-size: 2rem;
+    color: #efefef;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "";
+    margin-left: 0px;
+    display: inline-block;
+    transform: translateX(0px);
+    transition-duration: 1s;
+  }
+  header input:checked ~ nav {
+    transform: translateX(0vw);
+    transition-duration: 1s;
+  }
+  header input:not(:checked) ~ nav {
+    transform: translateX(-100vw);
+    transition-duration: 1s;
+  }
+  header nav {
+    background-color: #32b298;
+    height: 100vh;
+    position: absolute;
+    top: 0%;
+    width: 100%;
   }
 }
-
-.toggleNavButton {
-  appearance: none;
-  font-size: 25px;
-  border: none;
-  background: none;
-  margin: 0;
-  padding: calc(14 / 17 / 2 * 1rem);
-  outline: none;
-  color: inherit;
-
-  & svg {
-    display: block;
-    fill: inherit;
+@media screen and (min-width: 481px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-
-  @media (--media-min-small) {
+  header input {
     display: none;
   }
+  header .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 1vw;
+  }
+  header nav {
+    width: 100%;
+  }
+  header ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-right: 1vw;
+  }
+  header ul:not([data-drop]) {
+    display: flex;
+    list-style: none;
+  }
+  header ul:not([data-drop]) li:hover [data-drop] {
+    display: flex;
+    background-color: gray;
+    text-align: left;
+    width: 150px;
+    height: 200px;
+    border-bottom-left-radius: 10% 10%;
+    border-bottom-right-radius: 10% 10%;
+  }
 }
 
-.nav {
+[data-drop] {
   display: none;
-
-  @nest & ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  @nest & ul li a {
-    display: block;
-    color: inherit;
-    text-decoration: none;
-  }
-
-  @media (hover: hover) {
-    @nest & ul li a:hover {
-      color: var(--color-accent);
-    }
-  }
-
-  @media (--media-max-small) {
-    position: absolute;
-    background: var(--color-white);
-    color: var(--color-black);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    left: 0;
-    right: 0;
-    top: 4.3rem;
-
-    @nest & ul {
-      padding: 1rem 0;
-    }
-
-    @nest & ul li a {
-      padding: 0.5rem 1.5rem;
-    }
-  }
-
-  @media (--media-min-small) {
-    display: block;
-
-    @nest & ul {
-      list-style: none;
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    @nest & ul li a {
-      padding: 0.5rem;
-    }
-  }
+  flex-direction: column;
+  position: absolute;
+  list-style: none;
+  padding: 0;
 }
 
-.showNav {
-  display: block;
-}
+/*# sourceMappingURL=header.module.css.map */

@@ -5,8 +5,17 @@ export default {
   fields: [
     {
       name: "title",
-      type: "localeString",
+      type: "string",
       title: "Title",
+    },
+    {
+      name: "slug",
+      type: "slug",
+      title: "Slug",
+      options: {
+        source: "title",
+        maxLength: 96,
+      },
     },
     {
       name: "pageBuilder",

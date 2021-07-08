@@ -4,25 +4,21 @@ export default {
   title: "Formations",
   fields: [
     {
-      name: "image",
-      type: "image",
-      title: "Image",
-    },
-    {
       name: "title",
-      type: "localeString",
-      title: "Title",
+      type: "string",
+      title: "title",
     },
     {
-      name: "desc",
-      type: "localeBody",
-      title: "Description:",
+      name: "etapes",
+      type: "array",
+      title: "Sections",
+      of: [{ type: "formation" }],
     },
     {
       name: "partenaires",
-      type: "reference",
+      type: "array",
       title: "Partenaires:",
-      to: [{ type: "partenaire" }],
+      of: [{ type: "reference", to: [{ type: "partenaire" }] }],
     },
   ],
 };

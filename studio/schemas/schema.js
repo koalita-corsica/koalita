@@ -23,9 +23,9 @@ import logo from "./objects/logo";
 import formations from "./objects/formations";
 import siteweb from "./objects/siteweb";
 import suppCom from "./objects/suppCom";
-import localeString from "./objects/localeString";
 import etape from "./objects/etape";
-import localeBody from "./objects/localeBody";
+import supcomImage from "./objects/suppComImg";
+import formation from "./objects/formation";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -52,9 +52,9 @@ export default createSchema({
     formations,
     siteweb,
     suppCom,
-    localeString,
     etape,
-    localeBody,
+    supcomImage,
+    formation,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
   ]),

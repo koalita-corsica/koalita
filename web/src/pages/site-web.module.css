@@ -1,0 +1,19 @@
+@import "../pages/normalize.module.css";
+.wrapper {
+  display: flex;
+}
+.wrapper .right {
+  font-size: 40px;
+  position: relative;
+  right: 57%;
+  top: 80%;
+  cursor: pointer;
+}
+.wrapper .left {
+  font-size: 40px;
+  position: relative;
+  top: 80%;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=site-web.module.css.map */

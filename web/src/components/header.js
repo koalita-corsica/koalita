@@ -1,47 +1,64 @@
+/* eslint-disable no-unused-vars */
 import { Link } from "gatsby";
 import React from "react";
-import Icon from "./icon";
-import { cn } from "../lib/helpers";
+import logo from "../assets/logo.png";
 
 import * as styles from "./header.module.css";
 
+window.onscroll = function () {
+  if (window.innerWidth < 620) {
+    scrollFunction();
+  }
+};
+
+function scrollFunction() {
+  if (window.scrollY > 50 || window.scrollY > 50) {
+    document.getElementById("logo").style.display = "none";
+    document.getElementById("menuhead").style.borderRadius = "0 0 0 0 ";
+  } else {
+    document.getElementById("logo").style.display = "inline";
+    document.getElementById("menuhead").style.borderRadius =
+      "50% 50% 50% 50% / 0% 0% 100% 100% ";
+  }
+}
+
 const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
-  <div className={styles.root}>
-    <div className={styles.wrapper}>
-      <input id="box1" type="checkbox" />
-      <div class="logo" id="menuhead">
-        <img src="https://via.placeholder.com/100x100" id="logo" />
-        <h1>Koalità</h1>
-      </div>
-      <nav>
-        <ul>
-          <a href="#">
-            <li>
-              <img src="https://via.placeholder.com/50x50" />
-            </li>
-          </a>
-          <a href="#">
-            <li>Accueil</li>
-          </a>
-          <a href="#">
-            <li>Graphisme</li>
-          </a>
-          <a href="#">
-            <li>Web</li>
-          </a>
-          <a href="#">
-            <li>Formation</li>
-          </a>
-          <a href="#">
-            <li>Conseil</li>
-          </a>
-          <a href="#" class="current">
-            <li>Contact</li>
-          </a>
-        </ul>
-      </nav>
+  <header>
+    <input id="box1" type="checkbox" />
+    <div className={styles.logo} id="menuhead">
+      <img src={logo} id="logo" />
     </div>
-  </div>
+    <nav>
+      <ul>
+        <li>
+          <a href="/">Accueil</a>
+        </li>
+        <li>
+          <a>Nos Prestations</a>
+          <ul data-drop>
+            <li>
+              <a href="#">Subitem 1</a>
+            </li>
+            <li>
+              <a href="#">Subitem 2</a>
+            </li>
+            <li>
+              <a href="#">Subitem 3</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="/">E-Shop</a>
+        </li>
+        <li>
+          <a href="/">Blog</a>
+        </li>
+        <li>
+          <a href="/contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 );
 
 export default Header;

@@ -4,19 +4,10 @@ export default {
   title: "Support Com",
   fields: [
     {
-      name: "title",
-      type: "localeString",
-      title: "Title",
-    },
-    {
       name: "image",
-      type: "image",
+      type: "array",
       title: "Image",
-    },
-    {
-      name: "description",
-      type: "localeBody",
-      title: "Description",
+      of: [{ type: "supcomImage" }],
     },
   ],
 };

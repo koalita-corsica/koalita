@@ -23,5 +23,12 @@
     "eslint-plugin-react": "^7.22.0",
     "lerna": "^3.13.1",
     "prettier": "^2.3.0"
+  },
+  "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
+    "gatsby-plugin-page-transitions": "^1.0.8",
+    "gatsby-plugin-transition-link": "^1.20.5",
+    "jquery": "^3.6.0",
+    "react-icons": "^4.2.0"
   }
 }

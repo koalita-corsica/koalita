@@ -5,7 +5,7 @@ export default {
   fields: [
     {
       name: "name",
-      type: "localeString",
+      type: "string",
       title: "Name",
     },
     {

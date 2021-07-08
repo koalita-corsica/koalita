@@ -1,0 +1,40 @@
+.container {
+  background: radial-gradient(100px at 105% 50vh, #32b298 0%, #32b298 32vh, rgba(0, 0, 0, 0) 0px);
+  z-index: 99;
+  background-attachment: fixed;
+  margin: 2rem;
+  width: 375vw;
+  display: grid;
+  grid-template-columns: repeat(15, 25vw);
+  grid-template-rows: 30vh 30vh;
+  grid-gap: 1rem;
+  grid-auto-flow: column dense;
+}
+.container .item {
+  border: solid 1px black;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.container .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.container .rectangle {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+.container .carree {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+.container .vertical {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.fake {
+  height: 375vw;
+}
+
+/*# sourceMappingURL=index.module.css.map */

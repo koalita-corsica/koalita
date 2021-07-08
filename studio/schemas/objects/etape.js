@@ -5,18 +5,23 @@ export default {
   fields: [
     {
       name: "etape",
-      type: "localeString",
+      type: "string",
       title: "Etape:",
     },
     {
       name: "title",
-      type: "localeString",
+      type: "string",
       title: "Title",
     },
     {
       name: "desc",
-      type: "localeBody",
+      type: "bodyPortableText",
       title: "Description d'Etape:",
+    },
+    {
+      name: "image",
+      type: "image",
+      title: "Image",
     },
   ],
 };

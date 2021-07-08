@@ -1,0 +1,19 @@
+* {
+  background-color: transparent;
+}
+
+.content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 5fr 3fr 2fr 1fr;
+}
+
+.first {
+  grid-column-start: 2;
+}
+
+.contenu {
+  margin: 0 auto;
+  display: flex;
+  gap: 25px;
+}
