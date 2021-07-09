@@ -1,6 +1,5 @@
 import React from "react";
-import PortableText from "./portableText";
-import { AiOutlineArrowLeft } from "react-icons/ai";
+import PortableText from "../portableText";
 import { Link } from "gatsby";
 
 import * as styles from "./logoPage.module.css";

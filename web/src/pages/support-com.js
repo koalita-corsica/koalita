@@ -3,7 +3,7 @@
 import React from "react";
 import Layout from "../containers/layout";
 import { graphql } from "gatsby";
-import SupComPage from "../components/supComPage";
+import SupComPage from "../components/supportCom/supComPage";
 
 export const query = graphql`
   query ComQuery {

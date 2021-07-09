@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-key */
 import React from "react";
-import PortableText from "./portableText";
-import { Link } from "gatsby";
+import PortableText from "../portableText";
 
 import * as styles from "./formPage.module.css";
 

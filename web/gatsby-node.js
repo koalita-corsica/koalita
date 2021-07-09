@@ -41,6 +41,54 @@ async function createRealisationsPages(graphql, actions) {
   });
 }
 
+async function createSupPages(graphql, actions) {
+  const { createPage } = actions;
+  const result = await graphql(`
+    {
+      allSanityPrestations(
+        filter: { slug: { current: { eq: "support-de-com" } } }
+      ) {
+        edges {
+          node {
+            id
+            pageBuilder {
+              ... on SanitySuppCom {
+                _key
+                _type
+                image {
+                  alt
+                  image {
+                    asset {
+                      url
+                    }
+                  }
+                  _rawDesc
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  if (result.errors) throw result.errors;
+
+  const postEdges = (result.data.allSanityPrestations || {}).edges || [];
+
+  postEdges.forEach((edge) => {
+    const { id, pageBuilder = {} } = edge.node;
+    const path = `/support-com/${pageBuilder[0].image.alt}/`;
+
+    createPage({
+      path,
+      component: require.resolve("./src/templates/supcom-template.js"),
+      context: { id },
+    });
+  });
+}
+
 exports.createPages = async ({ graphql, actions }) => {
   await createRealisationsPages(graphql, actions);
+  await createSupPages(graphql, actions);
 };

@@ -3,7 +3,7 @@
 import React from "react";
 import Layout from "../containers/layout";
 import { graphql } from "gatsby";
-import FormPage from "../components/formPage";
+import FormPage from "../components/formations/formPage";
 
 export const query = graphql`
   query FormQuery {

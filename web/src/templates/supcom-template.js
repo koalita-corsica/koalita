@@ -5,30 +5,30 @@ import Layout from "../containers/layout";
 import Container from "../components/container";
 import SEO from "../components/seo";
 import { toPlainText } from "../lib/helpers";
-import Travails from "../components/realisations/travails";
+import Supcom from "../components/supportCom/supcom";
 
 export const query = graphql`
-  query TravailsTemplateQuery($id: String!) {
-    post: sanityTravails(id: { eq: $id }) {
+  query SupcomTemplateQuery($id: String!) {
+    post: sanityPrestations(id: { eq: $id }) {
       id
-      slug {
-        current
-      }
-      title
-      image {
-        asset {
-          url
+      pageBuilder {
+        ... on SanitySuppCom {
+          image {
+            _rawDesc
+            image {
+              asset {
+                url
+              }
+            }
+            alt
+          }
         }
-      }
-      _rawDesc
-      client {
-        name
       }
     }
   }
 `;
 
-const TravailsTemplate = (props) => {
+const SupcomTemplate = (props) => {
   const { data, errors } = props;
   const post = data && data.post;
   return (
@@ -48,9 +48,9 @@ const TravailsTemplate = (props) => {
         </Container>
       )}
 
-      {post && <Travails {...post} />}
+      {post && <Supcom {...post} />}
     </Layout>
   );
 };
 
-export default TravailsTemplate;
+export default SupcomTemplate;

@@ -4,7 +4,7 @@ import React from "react";
 import Layout from "../containers/layout";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
-import LogoPage from "../components/logoPage";
+import LogoPage from "../components/logotipe/logoPage";
 
 import * as styles from "./index.module.css";
 

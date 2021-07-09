@@ -33,32 +33,32 @@ export const query = graphql`
   }
 `;
 
-window.onscroll = function () {
+const IndexPage = (props) => {
+  const { data } = props;
+  const travails = data.allSanityTravails;
+
   if (window.innerWidth > 620) {
     $(window).on("scroll", function () {
       $("#container").css("left", -$(window).scrollTop());
     });
   }
-};
 
-const IndexPage = (props) => {
-  const { data } = props;
-  const travails = data.allSanityTravails;
-  console.log(travails);
+  console.log(window.innerWidth);
+
   return (
     <Layout>
       <div className={styles.container} id="container">
         {travails.edges.map((item) => (
-          <Link to={"/realisations/" + `${item.node.slug.current}`}>
-            <div className={`styles.item ${item.node.genre}`}>
+          <div className={styles.item}>
+            <Link to={"/realisations/" + `${item.node.slug.current}`}>
               <img
                 src={item.node.image.asset.url}
                 alt=""
                 width="200"
                 height="200"
               />
-            </div>
-          </Link>
+            </Link>
+          </div>
         ))}
       </div>
     </Layout>

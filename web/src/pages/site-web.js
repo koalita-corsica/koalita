@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Layout from "../containers/layout";
 import { graphql } from "gatsby";
-import Slider from "../components/siteSlider";
+import Slider from "../components/siteweb/siteSlider";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 

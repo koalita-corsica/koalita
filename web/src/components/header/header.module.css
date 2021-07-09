@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "../pages//normalize.module.css";
+@import "../../pages/normalize.module.css";
 a {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;

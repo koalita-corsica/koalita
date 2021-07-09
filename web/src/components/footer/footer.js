@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { Link } from "gatsby";
 import React from "react";
-import Icon from "./icon";
-import { cn } from "../lib/helpers";
+import Icon from "../icon";
+import { cn } from "../../lib/helpers";
 import { FiInstagram } from "react-icons/fi";
 import { FaFacebookF } from "react-icons/fa";
 

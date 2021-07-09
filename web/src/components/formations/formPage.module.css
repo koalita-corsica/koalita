@@ -1,4 +1,4 @@
-@import "../pages//normalize.module.css";
+@import "../../pages/normalize.module.css";
 .wrapper {
   display: grid;
   grid-template-columns: 2% 30% 40% 24%;

@@ -1,11 +1,11 @@
-@import "../pages/normalize.module.css";
+@import "../../pages/normalize.module.css";
 .wrapper {
   display: grid;
   grid-template-columns: 5% 45% 50%;
 }
 .wrapper .wrap {
   grid-column-start: 2;
-  background: radial-gradient(190px at 50% 50%, #32b298 0%, #32b298 35vh, rgba(0, 0, 0, 0) 0px);
+  background: radial-gradient(190px at 50% 50%, #32b298 0%, #32b298 34vh, rgba(0, 0, 0, 0) 0px);
 }
 .wrapper .wrap .contenu {
   display: flex;
@@ -31,8 +31,8 @@
 }
 .wrapper .wrap button {
   position: relative;
-  top: -20px;
-  left: 145px;
+  top: -10px;
+  left: 170px;
   margin-top: 20px;
   text-align: center;
   background: #ffffff 0% 0% no-repeat padding-box;
@@ -63,12 +63,23 @@
 
 .content {
   display: flex;
-}
-.content .left {
+  font-size: 80px;
+  font-weight: bold;
   align-content: center;
   justify-content: center;
   align-items: center;
-  background-color: red;
+}
+.content .left {
+  align-content: start;
+  justify-content: start;
+  align-items: start;
+  cursor: pointer;
+}
+.content .right {
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-/*# sourceMappingURL=slider.module.css.map */
+/*# sourceMappingURL=siteSlider.module.css.map */

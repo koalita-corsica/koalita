@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { Link } from "gatsby";
 import React from "react";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 
 import * as styles from "./header.module.css";
 

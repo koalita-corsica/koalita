@@ -1,0 +1,79 @@
+.container {
+  position: relative;
+  top: 10vh;
+  right: 12vw;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  .box {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .left {
+    font-size: 80px;
+    cursor: pointer;
+  }
+  .box :nth-child(2) {
+    order: 1;
+    text-align: center;
+    img {
+      width: 274px;
+      height: 300px;
+    }
+  }
+  .box :nth-child(3) {
+    order: 3;
+    text-align: center;
+    img {
+      width: 274px;
+      height: 300px;
+    }
+  }
+  .box :nth-child(4) {
+    order: 4;
+    text-align: center;
+    img {
+      width: 274px;
+      height: 300px;
+    }
+  }
+  .box :nth-child(5) {
+    order: 5;
+    border-radius: 50%;
+    border: 30px solid #1bbc9b;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    img {
+      width: 274px;
+      height: 300px;
+    }
+  }
+  .box :nth-child(6) {
+    order: 6;
+    text-align: center;
+    img {
+      width: 274px;
+      height: 300px;
+    }
+  }
+  .box :nth-child(7) {
+    order: 7;
+    text-align: center;
+    img {
+      width: 274px;
+      height: 300px;
+    }
+  }
+  .right {
+    font-size: 80px;
+    cursor: pointer;
+  }
+}

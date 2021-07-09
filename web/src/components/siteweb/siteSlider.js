@@ -1,6 +1,6 @@
 import React from "react";
-import PortableText from "./portableText";
-import { Link, StaticQuery, graphql } from "gatsby";
+import PortableText from "../portableText";
+import { StaticQuery, graphql } from "gatsby";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 

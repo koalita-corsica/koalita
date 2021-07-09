@@ -11,7 +11,8 @@ $grisf: #3d3d3d;
   );
   z-index: 99;
   background-attachment: fixed;
-  margin: 2rem;
+  margin: 0 auto;
+  margin-left: 2rem;
   width: 375vw;
   display: grid;
   grid-template-columns: repeat(15, 25vw);
@@ -41,7 +42,3 @@ $grisf: #3d3d3d;
     grid-row: span 2;
   }
 } // fin container
-
-.fake {
-  height: 375vw;
-}

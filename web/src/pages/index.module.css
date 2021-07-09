@@ -2,7 +2,8 @@
   background: radial-gradient(100px at 105% 50vh, #32b298 0%, #32b298 32vh, rgba(0, 0, 0, 0) 0px);
   z-index: 99;
   background-attachment: fixed;
-  margin: 2rem;
+  margin: 0 auto;
+  margin-left: 2rem;
   width: 375vw;
   display: grid;
   grid-template-columns: repeat(15, 25vw);
@@ -31,10 +32,6 @@
 .container .vertical {
   grid-column: span 1;
   grid-row: span 2;
-}
-
-.fake {
-  height: 375vw;
 }
 
 /*# sourceMappingURL=index.module.css.map */
