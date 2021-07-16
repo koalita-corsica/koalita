@@ -1,8 +1,22 @@
-@import "../../pages/normalize.module.css";
-.wrapper {
-  display: grid;
-  grid-template-columns: 70% 30%;
-  height: 68vh;
+@import '../../pages/normalize.module.css';
+@import url(https://use.typekit.net/fer8mvx.css);
+
+@font-face {
+  font-family: 'Britannic';
+  src: local('Britannic'),
+    url('../../assets/britannic-regular.otf') format('opentype');
+  font-display: swap;
+}
+
+.brit {
+  font-family: 'Britannic', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: #3d4441;
+}
+
+.muli {
+  font-family: 'muli', sans-serif;
 }
 
 .first {
@@ -41,7 +55,12 @@
 }
 
 .second {
-  background: radial-gradient(190px at 50% 50%, #32b298 0%, #32b298 20vh, rgba(0, 0, 0, 0) 0px);
+  background: radial-gradient(
+    190px at 50% 50%,
+    #32b298 0%,
+    #32b298 20vh,
+    rgba(0, 0, 0, 0) 0px
+  );
   display: flex;
   align-content: center;
   justify-content: center;
@@ -52,7 +71,7 @@
   box-shadow: 3px 3px 8px #00000029;
   border-radius: 10px;
   border: none;
-  width: 200px;
+  width: 170px;
   height: 41px;
   font-size: 20px;
   color: #1bbc9b;
@@ -61,4 +80,31 @@
   background-color: #3d3d3d;
 }
 
+.text p {
+  text-align: justify;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #7f7f7f;
+}
+
+.text div {
+  text-align: center;
+}
+
+.bg {
+  text-align: center;
+  border-radius: 50%;
+  background-color: #32b298;
+  width: 12rem;
+  height: 12rem;
+}
+
+.bg button {
+  width: 170px;
+}
+
+.rounded img {
+  border-radius: 20px !important;
+}
 /*# sourceMappingURL=logoPage.module.css.map */

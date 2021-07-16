@@ -1,0 +1,27 @@
+@import '../../pages/normalize.module.css';
+@import url(https://use.typekit.net/fer8mvx.css);
+
+@font-face {
+  font-family: 'Britannic';
+  src: local('Britannic'),
+    url('../../assets/britannic-regular.otf') format('opentype');
+  font-display: swap;
+}
+
+.title {
+  color: #3d4441;
+  font-family: 'Britannic', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.texted p {
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.par:first-child p {
+  color: #fff;
+}

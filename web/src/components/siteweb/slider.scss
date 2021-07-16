@@ -1,4 +1,12 @@
-@import "../../pages/normalize.module.css";
+@import '../../pages/normalize.module.css';
+@import url(https://use.typekit.net/fer8mvx.css);
+
+@font-face {
+  font-family: 'Britannic';
+  src: local('Britannic'),
+    url('../../assets/britannic-regular.otf') format('opentype');
+  font-display: swap;
+}
 
 $vert: #32b298;
 $grisc: #efefef;
@@ -6,15 +14,16 @@ $grisf: #3d3d3d;
 
 .wrapper {
   display: grid;
-  grid-template-columns: 5% 45% 50%;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   .wrap {
-    grid-column-start: 2;
-    background: radial-gradient(
-      190px at 50% 50%,
-      $vert 0%,
-      $vert 34vh,
-      rgba(0, 0, 0, 0) 0px
-    );
+    background-color: #1bbc9b;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    h1 {
+      color: #3d4441;
+      padding-left: 130px;
+    }
     .contenu {
       display: flex;
       flex-direction: column;
@@ -23,49 +32,39 @@ $grisf: #3d3d3d;
       align-items: center;
       display: flex;
       flex-direction: column;
-      color: #3d4441;
-      font-size: 20px;
+
       .cont {
-        color: #fff;
-        width: 60%;
-        margin-top: 20px;
-        font-size: 20px;
+        width: 73%;
+        h3 {
+          font-family: 'Britannic', sans-serif;
+          color: #fff;
+          font-size: 30px;
+        }
+        h5 {
+          font-family: 'Muli', sans-serif;
+          color: #fff;
+          font-size: 15px;
+        }
       }
       .desc {
         width: 60%;
-        color: #fff;
-        font-size: 14px;
-      }
-    }
-    button {
-      position: relative;
-      top: -10px;
-      left: 170px;
-      margin-top: 20px;
-      text-align: center;
-      background: #ffffff 0% 0% no-repeat padding-box;
-      box-shadow: 3px 3px 8px #00000029;
-      border-radius: 10px;
-      width: 200px;
-      height: 41px;
-      color: $vert;
-      border: none;
-      text-transform: uppercase;
-      &:hover {
-        background-color: $grisf;
+        p {
+          color: #fff;
+          font-size: 14px;
+          font-weight: bold;
+          font-family: 'Montserrat' sans-serif;
+        }
       }
     }
   }
   .image {
-    grid-row-start: -1;
-    grid-column-start: 3;
     display: flex;
     align-content: center;
     justify-content: center;
     align-items: center;
     img {
       margin: 0 auto;
-      width: 1006px;
+      width: 700px;
       height: 650px;
     }
   }

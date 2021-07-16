@@ -1,10 +1,40 @@
-@import "../../pages/normalize.module.css";
+@import '../../pages/normalize.module.css';
+@import url(https://use.typekit.net/fer8mvx.css);
+@font-face {
+  font-family: 'Britannic';
+  src: local('Britannic'),
+    url('../../assets/britannic-regular.otf') format('opentype');
+  font-display: swap;
+}
+
+.title {
+  font-family: 'Britannic', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: #fff;
+}
+
+.job {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+}
+
+.job p {
+  width: 90%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  padding-left: 2rem;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: 30% 60% 65%;
   width: 100vh;
-  height: 100vw;
-  aspect-ratio: 16/9;
+  height: 83vh;
 }
 
 .arrow {
@@ -23,22 +53,31 @@
   align-content: center;
   justify-content: center;
   height: 100px;
-  padding-top: 40%;
+  padding-top: 45%;
   padding-left: 10%;
+  color: #fff;
+}
+.content h1 {
+  font-family: 'Britannic', sans-serif;
+  color: #fff;
 }
 .content p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
   width: 85%;
+  color: #fff;
 }
 
 .bg {
   position: absolute;
-  top: 20%;
-  left: 13%;
-  width: 40%;
-  height: 68%;
+  height: 466px;
+  width: 466px;
   background-color: #1bbc9b;
   border-radius: 50%;
   z-index: -1;
+  top: 10rem;
+  left: -3rem;
 }
 
 .imgs {
@@ -47,7 +86,7 @@
   align-content: center;
   justify-content: center;
   align-self: center;
-  height: 85%;
+  height: 35%;
   width: 100%;
 }
 .imgs img {

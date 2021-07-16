@@ -1,8 +1,8 @@
-@import "../pages/normalize.module.css";
+@import '../pages/normalize.module.css';
 
 .page {
   width: 100vw;
-  height: 100vh;
+  height: auto;
 }
 
 footer {

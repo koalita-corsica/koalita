@@ -1,16 +1,22 @@
 @import "../pages/normalize.module.css";
+@font-face {
+  font-family: "Britannic";
+  src: local("Britannic"), url("../assets/britannic-regular.otf") format("opentype");
+  font-display: swap;
+}
 * {
   font-family: Montserrat, sans-serif;
 }
 
 .wrapper {
   display: grid;
-  grid-template-columns: 45% 55%;
+  grid-template-columns: 45% 55% 10%;
   background: transparent;
   height: auto;
 }
 .wrapper .title {
   margin: auto;
+  font-family: "Britannic", sans-serif;
 }
 
 .team {
@@ -39,22 +45,15 @@
 }
 
 .form {
-  width: 770px;
-  height: 770px;
   grid-column-start: 2;
   grid-row-start: 1;
-  background: #32b298;
-  border-bottom-left-radius: 100% 100%;
-  border-bottom-right-radius: 100% 100%;
-  border-top-left-radius: 100% 100%;
-  border-top-right-radius: 100% 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 10%;
-  right: 2%;
+  top: 20%;
+  right: 6%;
 }
 .form h1 {
   color: white;
@@ -78,7 +77,7 @@
 }
 .form button {
   width: 100px;
-  margin-top: 20px;
+  margin-top: 5px;
   text-align: center;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 3px 3px 8px #00000029;
@@ -97,9 +96,22 @@
 .form label {
   font-size: 14px;
   color: #3d4441;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.bg {
+  grid-column-start: 3;
+  width: 620px;
+  height: 620px;
+  background: #32b298;
+  border-bottom-left-radius: 100% 100%;
+  border-bottom-right-radius: 100% 100%;
+  border-top-left-radius: 100% 100%;
+  border-top-right-radius: 100% 100%;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=contact.module.css.map */

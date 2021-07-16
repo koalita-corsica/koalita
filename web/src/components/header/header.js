@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
-import { Link } from "gatsby";
-import React from "react";
-import logo from "../../assets/logo.png";
+import { Link } from 'gatsby';
+import React from 'react';
+import logo from '../../assets/logo1.png';
 
-import * as styles from "./header.module.css";
+import * as styles from './header.module.css';
 
 window.onscroll = function () {
   if (window.innerWidth < 620) {
@@ -13,12 +13,12 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (window.scrollY > 50 || window.scrollY > 50) {
-    document.getElementById("logo").style.display = "none";
-    document.getElementById("menuhead").style.borderRadius = "0 0 0 0 ";
+    document.getElementById('logo').style.display = 'none';
+    document.getElementById('menuhead').style.borderRadius = '0 0 0 0 ';
   } else {
-    document.getElementById("logo").style.display = "inline";
-    document.getElementById("menuhead").style.borderRadius =
-      "50% 50% 50% 50% / 0% 0% 100% 100% ";
+    document.getElementById('logo').style.display = 'inline';
+    document.getElementById('menuhead').style.borderRadius =
+      '50% 50% 50% 50% / 0% 0% 100% 100% ';
   }
 }
 
@@ -31,30 +31,49 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
     <nav>
       <ul>
         <li>
-          <a href="/">Accueil</a>
+          <Link to="/" activeStyle={{ color: '#32b298' }}>
+            Accueil
+          </Link>
         </li>
         <li>
           <a>Nos Prestations</a>
           <ul data-drop>
             <li>
-              <a href="#">Subitem 1</a>
+              <Link activeStyle={{ color: '#32b298' }} to="/logo">
+                Logo
+              </Link>
             </li>
             <li>
-              <a href="#">Subitem 2</a>
+              <Link activeStyle={{ color: '#32b298' }} to="/support-com">
+                Supports de com
+              </Link>
             </li>
             <li>
-              <a href="#">Subitem 3</a>
+              <Link activeStyle={{ color: '#32b298' }} to="/site-web">
+                Site Web
+              </Link>
+            </li>
+            <li>
+              <Link activeStyle={{ color: '#32b298' }} to="/formations">
+                Formations
+              </Link>
             </li>
           </ul>
         </li>
         <li>
-          <a href="/">E-Shop</a>
+          <Link activeStyle={{ color: '#32b298' }} to="/">
+            E-Shop
+          </Link>
         </li>
         <li>
-          <a href="/">Blog</a>
+          <Link activeStyle={{ color: '#32b298' }} to="/">
+            Blog
+          </Link>
         </li>
         <li>
-          <a href="/contact">Contact</a>
+          <Link activeStyle={{ color: '#32b298' }} to="/contact">
+            Contact
+          </Link>
         </li>
       </ul>
     </nav>

@@ -1,15 +1,32 @@
+@font-face {
+  font-family: 'Britannic';
+  src: local('Britannic'),
+    url('../assets/britannic-regular.otf') format('opentype');
+  font-display: swap;
+}
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
 .container {
-  background: radial-gradient(100px at 105% 50vh, #32b298 0%, #32b298 32vh, rgba(0, 0, 0, 0) 0px);
-  z-index: 99;
+  background: radial-gradient(
+    100px at 105% 50vh,
+    #32b298 0%,
+    #32b298 32vh,
+    rgba(0, 0, 0, 0) 0px
+  );
   background-attachment: fixed;
   margin: 0 auto;
+  width: 100vw;
+  height: 83vh;
   margin-left: 2rem;
-  width: 375vw;
   display: grid;
-  grid-template-columns: repeat(15, 25vw);
+  grid-template-columns: repeat(15, 15vw);
   grid-template-rows: 30vh 30vh;
   grid-gap: 1rem;
   grid-auto-flow: column dense;
+  overflow-x: scroll;
+  overflow-y: none;
 }
 .container .item {
   border: solid 1px black;

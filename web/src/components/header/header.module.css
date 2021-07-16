@@ -1,7 +1,8 @@
 @charset "UTF-8";
-@import "../../pages/normalize.module.css";
+@import '../../pages/normalize.module.css';
+@import url(https://use.typekit.net/fer8mvx.css);
 a {
-  font-family: "Montserrat", sans-serif;
+  font-family: "muli", sans-serif;
   text-decoration: none;
   text-align: left;
   font: normal normal 800 20px/30px Muli;
@@ -29,9 +30,7 @@ header {
   header .logo {
     top: 40px;
     text-align: center;
-    background: #32b298;
     padding: 1rem;
-    border-radius: 50% 50% 50% 50%/0% 0% 100% 100%;
     width: 418px;
     height: 143px;
   }

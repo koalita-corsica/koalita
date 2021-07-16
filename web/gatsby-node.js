@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
-const { isFuture } = require("date-fns");
+const { isFuture } = require('date-fns');
 /**
  * Implement Gatsby's Node APIs in this file.
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const { format } = require("date-fns");
+const { format } = require('date-fns');
 
 async function createRealisationsPages(graphql, actions) {
   const { createPage } = actions;
@@ -29,13 +29,13 @@ async function createRealisationsPages(graphql, actions) {
 
   const postEdges = (result.data.allSanityTravails || {}).edges || [];
 
-  postEdges.forEach((edge) => {
+  postEdges.forEach(edge => {
     const { id, slug = {} } = edge.node;
     const path = `/realisations/${slug.current}/`;
 
     createPage({
       path,
-      component: require.resolve("./src/templates/travails-template.js"),
+      component: require.resolve('./src/templates/travails-template.js'),
       context: { id },
     });
   });
@@ -54,15 +54,12 @@ async function createSupPages(graphql, actions) {
             pageBuilder {
               ... on SanitySuppCom {
                 _key
-                _type
+                _rawDesc
+                title
                 image {
-                  alt
-                  image {
-                    asset {
-                      url
-                    }
+                  asset {
+                    url
                   }
-                  _rawDesc
                 }
               }
             }
@@ -76,13 +73,13 @@ async function createSupPages(graphql, actions) {
 
   const postEdges = (result.data.allSanityPrestations || {}).edges || [];
 
-  postEdges.forEach((edge) => {
-    const { id, pageBuilder = {} } = edge.node;
-    const path = `/support-com/${pageBuilder[0].image.alt}/`;
+  postEdges.forEach(edge => {
+    const { id } = edge.node;
+    const path = `/support-com/product`;
 
     createPage({
       path,
-      component: require.resolve("./src/templates/supcom-template.js"),
+      component: require.resolve('./src/templates/supcom-template.js'),
       context: { id },
     });
   });

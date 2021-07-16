@@ -1,6 +1,6 @@
 export default {
   widgets: [
-    { name: "structure-menu", layout: { width: "large" } },
+    { name: 'structure-menu', layout: { width: 'large' } },
     // {
     //   name: "project-info",
     //   options: {
@@ -44,12 +44,28 @@ export default {
     // },
     // { name: "project-users", layout: { height: "large" } },
     {
-      name: "document-list",
+      name: 'document-list',
       options: {
-        title: "Realisations",
-        types: ["travails"],
+        title: 'Realisations',
+        types: ['travails'],
       },
-      layout: { width: "large" },
+      layout: { width: 'medium' },
+    },
+    {
+      name: 'document-list',
+      options: {
+        title: 'Goodies',
+        types: ['goodies'],
+      },
+      layout: { width: 'small' },
+    },
+    {
+      name: 'document-list',
+      options: {
+        title: 'Blog Post',
+        types: ['blogpost'],
+      },
+      layout: { width: 'medium' },
     },
   ],
 };

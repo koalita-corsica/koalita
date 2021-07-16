@@ -1,11 +1,12 @@
-@import "../../pages/normalize.module.css";
+@import '../../pages/normalize.module.css';
+@import url(https://use.typekit.net/fer8mvx.css);
 
 $vert: #32b298;
 $grisc: #efefef;
 $grisf: #3d3d3d;
 
 a {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'muli', sans-serif;
   text-decoration: none;
   text-align: left;
   font: normal normal 800 20px/30px Muli;
@@ -33,9 +34,7 @@ header {
     .logo {
       top: 40px;
       text-align: center;
-      background: $vert;
       padding: 1rem;
-      border-radius: 50% 50% 50% 50% / 0% 0% 100% 100%;
       width: 418px;
       height: 143px;
     }
@@ -58,9 +57,9 @@ header {
     input:checked:after {
       font-size: 2rem;
       color: $grisc;
-      font-family: "Font Awesome 5 Free";
+      font-family: 'Font Awesome 5 Free';
       font-weight: 900;
-      content: "\f00d";
+      content: '\f00d';
       display: inline-block;
       transform: translateX(85vw);
       transition-duration: 1s;
@@ -69,9 +68,9 @@ header {
     input:not(:checked):after {
       font-size: 2rem;
       color: $grisc;
-      font-family: "Font Awesome 5 Free";
+      font-family: 'Font Awesome 5 Free';
       font-weight: 900;
-      content: "\f039";
+      content: '\f039';
       margin-left: 0px;
       display: inline-block;
       transform: translateX(0px);

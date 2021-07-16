@@ -1,4 +1,4 @@
-@import "../pages/normalize.module.css";
+@import '../pages/normalize.module.css';
 .content {
   width: 100%;
   height: auto;
@@ -6,4 +6,5 @@
   flex-direction: column;
   justify-content: center;
   background-color: transparent;
+  background-color: tomato;
 }
